@@ -1,30 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - CV</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — CV</title>
   <style>
+    :root {
+      --accent: #0a3d91;
+      --text: #222
+    }
+
     body {
-      font-family: Arial;
-      background: #000;
-      color: #fff;
-      text-align: center;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
       margin: 0;
-      padding: 40px;
+      padding: 28px;
+      background: #fff
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 28px
+    }
+
+    header {
+      grid-column: 1/-1;
+      text-align: center;
+      margin-bottom: 6px
     }
 
     h1 {
-      color: #0ff;
+      color: var(--accent);
+      margin: 0
+    }
+
+    .card {
+      background: #fafafa;
+      padding: 18px;
+      border-radius: 8px;
+      border: 1px solid #eee
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .skill {
+      background: #eef3ff;
+      color: var(--accent);
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: .9rem
+    }
+
+    @media(max-width:800px) {
+      .wrap {
+        grid-template-columns: 1fr
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>Zheng Kong</h1>
-  <p>Product Manager | AI & Tools Enthusiast</p>
-  <p>Email: you@email.com</p>
+  <div class="wrap">
+    <header>
+      <h1>Zheng Kong</h1>
+      <div>Product Manager · AI & Robots · Canada · <a href="mailto:zheng.kong.ca@gmail.com">zheng.kong.ca@gmail.com</a>
+      </div>
+    </header>
+
+    <aside class="card">
+      <h3>Contact</h3>
+      <div>zheng.kong.ca@gmail.com<br />LinkedIn: /in/eric-kong-70509b59/<br /><a href="https://xbus.ca">xbus</a>≈
+      </div>
+      <hr />
+      <h3>Skills</h3>
+      <div class="skills">
+        <span class="skill">Python</span><span class="skill">Java</span><span class="skill">Power BI</span>
+        <span class="skill">Hadoop</span><span class="skill">Hbase</span><span class="skill">Axure</span>
+        <span class="skill">Oracle</span><span class="skill">MySQL</span><span class="skill">Git</span>
+      </div>
+      <hr />
+      <h3>Education</h3>
+      <div><strong>Cert. Automotive Service Technician Harmonized Foundation</strong><br />Vancouver Community College —
+        2020</div>
+      <div><strong>MEng. Software Engineering</strong><br />Univ. of Science & Technology of China — 2007</div>
+    </aside>
+
+    <main>
+      <section class="card">
+        <h2>About</h2>
+        <p>Product manager and software architect with 15+ years in software innovation and 5 years in automotive
+          service. I integrate deep technical insight with hands-on engineering experience to create intelligent tools
+          and platforms that connect hardware, AI, and user needs.</p>
+      </section>
+
+      <section class="card" style="margin-top:16px">
+        <h2>Experience</h2>
+        <div><strong>Auto Service Technician</strong> <em>2022–2025</em>
+          <p>School bus, vehicle maintenance & repair in Canadian Tire and Southland.</p>
+        </div>
+        <div><strong>Product Manager — Richlink</strong> <em>2021–2022</em>
+          <p>Lead product strategy for short vedio platform; managed roadmap, KPIs, and releases.</p>
+        </div>
+        <div style="margin-top:10px"><strong>Bitcoin Mining</strong> <em>2016–2018</em>
+          <p>Built Bitcoin mine and mine maintenance.</p>
+        </div>
+        <div style="margin-top:10px"><strong>Software Engineer/Architect/Product Manager</strong> <em>2005–2016</em>
+          <p>Worked as a software engineer, architect, project manager in different software companies.</p>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>
